@@ -46,6 +46,7 @@ Make:時代に立ち上がった企業も、ハードウェアとは無縁のソ
 ![Operation Image Zoom Silicon Die](https://github.com/noritsuna/micro_irritating_maze/raw/main/images/operation1.png)
 
 そして、イライラコースは300umの直線コースとなっている。  
+![Operation Image Zoom Cource](https://github.com/noritsuna/micro_irritating_maze/raw/main/images/operation3.png)
 ![Operation Image Zoom Cource](https://github.com/noritsuna/micro_irritating_maze/raw/main/images/operation2.png)
 ちなみに、シリコンベアダイと半導体チップのサイズ感は昭和風に表現するとこんな感じになる。  
 ![Operation size_image](https://github.com/noritsuna/micro_irritating_maze/raw/main/images/size_image.png)
@@ -158,10 +159,10 @@ Verilogで記述すればあとはツールが半導体開発に必要な変換�
 ![Outside Pad](https://github.com/noritsuna/micro_irritating_maze/raw/main/images/klayout_vs.png)
 
 
-実際のレイアウトとしては、イライラコースの壁が壁への接触検知パッドになっており、イライラ棒が触れるとカウントアップする回路とイライラ棒がスタートパッド（正方形）に触れると時間計測を開始し、ゴールパッド（十字の形）に触れると時間計測が停止して、その時間と壁への接触回数を出力する回路で構成されている。  
+実際のレイアウトとしては、イライラコースの壁が壁への接触検知パッドになっており、イライラ棒が触れるとカウントアップする回路とイライラ棒がスタートパッド（丸形）に触れると時間計測を開始し、ゴールパッド（十字の形）に触れると時間計測が停止して、その時間と壁への接触回数を出力する回路で構成されている。  
 - イライラコースの壁パッド
 	- イライラ棒が接触したことを検知する回路へ接続されている
-- 正方形パッド
+- 丸形パッド
 	- 時間計測開始と壁への接触カウンターリセットする回路へ接続されている
 - 十字パッド
 	- 時間計測停止と壁への接触カウンターを出力する回路へ接続されている
@@ -260,10 +261,10 @@ Verilogで記述すればあとはツールが半導体開発に必要な変換�
 	- ![Complex Maze](https://github.com/noritsuna/micro_irritating_maze/raw/main/images/maze_complex.jpg) 
 - [/xschem/maze.sch](https://github.com/noritsuna/micro_irritating_maze/raw/main/xschem/maze.sch) 
 	- イライラコース部とデジタル回路部を接続するアナログ回路図。
-- [/gds/pad_and_resistor.gds](/https://github.com/noritsuna/micro_irritating_mazegds/raw/main/gds/pad_and_resistor.gds)
+- [/gds/pad_and_resistor.gds](https://github.com/noritsuna/micro_irritating_mazegds/raw/main/gds/pad_and_resistor.gds)
 	- VDDパッド、VSSパッド、各イライラコース動作用ピンのパッド。[/xschem/maze.sch](https://github.com/noritsuna/micro_irritating_maze/raw/main/xschem/maze.sch)に実装。
 	- DIYプローバー用（800um x 800um）と業務用プロービングシステム用（80um x 80um）の2種類のパッドを用意している。
-- [/counter_app/micro_irritating_maze/](/https://github.com/noritsuna/micro_irritating_mazegds/raw/main//counter_app/micro_irritating_maze/)
+- [/counter_app/micro_irritating_maze/](https://github.com/noritsuna/micro_irritating_mazegds/raw/main/counter_app/micro_irritating_maze/)
 	- コントローラー用のファイル一式。
 
 
